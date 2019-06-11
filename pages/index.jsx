@@ -3,6 +3,7 @@ import Recruiting from '../components/announcements/recruiting'
 import Hero from '../components/sections/hero'
 import About from '../components/sections/about'
 import Projects from '../components/sections/projects'
+import Teams from '../components/sections/teams'
 import Footer from '../components/sections/footer'
 
 const Index = () => (
@@ -12,6 +13,7 @@ const Index = () => (
         <Hero />
         <About />
         <Projects />
+        <Teams />
         <Footer />
     </>
 )
