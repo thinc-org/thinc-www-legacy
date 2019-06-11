@@ -204,8 +204,7 @@ module.exports = {
             none: 'none'
         },
         container: {
-            center: true,
-            padding: '2rem'
+            center: true
         },
         cursor: {
             auto: 'auto',
