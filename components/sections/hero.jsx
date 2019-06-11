@@ -107,9 +107,8 @@ const Hero = () => (
     <section
         className="w-full h-full flex items-center justify-center relative"
         style={{
-            width: '100vw',
-            height: '100vh',
-            minHeight: '600px'
+            width: '100%',
+            height: '800px'
         }}>
         <div className="w-full h-full flex items-center justify-center absolute top-0 z-20">
             <div className="flex flex-col mx-8">
