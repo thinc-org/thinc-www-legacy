@@ -122,7 +122,7 @@ const Hero = () => (
         </div>
         <Particles
             width="100%"
-            height="100%"
+            height={800}
             className="w-full h-full flex absolute top-0 z-10"
             params={config}
         />
