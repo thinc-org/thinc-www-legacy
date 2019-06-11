@@ -1,3 +1,5 @@
+import Card from '../../components/card'
+
 const Projects = () => (
     <>
         <style jsx>{`
@@ -20,9 +22,9 @@ const Projects = () => (
             </div>
             <div className="w-full flex items-stretch flex-col lg:flex-row mb-20">
                 <div className="flex w-full lg:w-1/3 mb-3 lg:mb-0">
-                    <div className="mx-3 w-full bg-gray-100 p-10 lg:p-15 xl:p-20">
+                    <Card className="bg-gray-100">
                         <div
-                            className="mb-5 rounded-full bg-gray-200 flex items-center justify-center shadow-inner product-preview"
+                            className="mb-5 rounded-full bg-gray-200 flex items-center justify-center border product-preview"
                             style={{
                                 backgroundImage:
                                     'url("https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/42/58/6b/42586b05-243c-94a1-6126-0b2a61b6076d/AppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-9.png/460x0w.jpg")'
@@ -33,11 +35,11 @@ const Projects = () => (
                             Never get lost in Chula again! Chula Pop Bus App helps make navigation
                             through Chulalongkorn University much easier.
                         </p>
-                    </div>
+                    </Card>
                 </div>
                 <div className="flex w-full lg:w-1/3 mb-3 lg:mb-0">
-                    <div className="mx-3 w-full bg-gray-100 p-10 lg:p-15 xl:p-20">
-                        <div className="mb-5 rounded-full bg-gray-200 flex items-center justify-center shadow-inner product-preview">
+                    <Card className="bg-gray-100">
+                        <div className="mb-5 rounded-full bg-gray-200 flex items-center justify-center border product-preview">
                             <span className="text-base text-gray-600 leading-none tracking-widest">
                                 SB
                             </span>
@@ -49,11 +51,11 @@ const Projects = () => (
                             Type in your beverage name in Thai and instantly get a
                             Starbucks-formatted name for it.
                         </p>
-                    </div>
+                    </Card>
                 </div>
                 <div className="flex w-full lg:w-1/3">
-                    <div className="mx-3 w-full bg-gray-100 p-10 lg:p-15 xl:p-20">
-                        <div className="mb-5 rounded-full bg-gray-200 flex items-center justify-center shadow-inner product-preview">
+                    <Card className="bg-gray-100">
+                        <div className="mb-5 rounded-full bg-gray-200 flex items-center justify-center border product-preview">
                             <span className="text-base text-gray-600 leading-none tracking-widest">
                                 OR
                             </span>
@@ -64,7 +66,7 @@ const Projects = () => (
                             pushes that further. This platform provides everything you need in order
                             to survive in Chulalongkorn University.
                         </p>
-                    </div>
+                    </Card>
                 </div>
             </div>
             <div className="container">
