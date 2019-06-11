@@ -39,7 +39,7 @@ const NavigationBar = () => {
                 })}
                 style={{ height: HEIGHT }}>
                 <div className="container flex flex-row items-baseline justify-between">
-                    <div className="flex flex-row items-baseline">
+                    <div className="flex flex-row items-baseline mx-8">
                         <a href="#" className="text-xl font-bold">
                             Thinc.
                         </a>
@@ -62,11 +62,12 @@ const NavigationBar = () => {
                                     ALUMNI
                                 </a>
                             </div>
-                        </div>
-                        <div className="md:hidden flex flex-row items-baseline">
-                            <a href="#" className="text-xs font-base tracking-widest">
-                                EXPAND
-                            </a>
+
+                            <div className="md:hidden flex flex-row items-baseline">
+                                <a href="#" className="text-xs font-base tracking-widest">
+                                    EXPAND
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

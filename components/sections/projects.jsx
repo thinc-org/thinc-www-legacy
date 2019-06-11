@@ -10,15 +10,17 @@ const Projects = () => (
         `}</style>
         <section className="bg-white py-20">
             <div className="container mb-20">
-                <div className="w-full flex flex-col">
-                    <div className="w-full md:w-2/3">
-                        <p className="text-4xl font-bold leading-none text-black">Projects</p>
+                <div className="mx-8">
+                    <div className="w-full flex flex-col">
+                        <div className="w-full md:w-2/3">
+                            <p className="text-4xl font-bold leading-none text-black">Projects</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className="w-full flex items-stretch flex-col lg:flex-row -px-3 mb-20">
-                <div className="flex w-full lg:w-1/3 px-3 mb-3 lg:mb-0">
-                    <div className="w-full bg-gray-100 p-10 lg:p-15 xl:p-20">
+            <div className="w-full flex items-stretch flex-col lg:flex-row mb-20">
+                <div className="flex w-full lg:w-1/3 mb-3 lg:mb-0">
+                    <div className="mx-3 w-full bg-gray-100 p-10 lg:p-15 xl:p-20">
                         <div
                             className="mb-5 rounded-full bg-gray-200 flex items-center justify-center shadow-inner product-preview"
                             style={{
@@ -33,8 +35,8 @@ const Projects = () => (
                         </p>
                     </div>
                 </div>
-                <div className="flex w-full lg:w-1/3 px-3 mb-3 lg:mb-0">
-                    <div className="w-full bg-gray-100 p-10 lg:p-15 xl:p-20">
+                <div className="flex w-full lg:w-1/3 mb-3 lg:mb-0">
+                    <div className="mx-3 w-full bg-gray-100 p-10 lg:p-15 xl:p-20">
                         <div className="mb-5 rounded-full bg-gray-200 flex items-center justify-center shadow-inner product-preview">
                             <span className="text-base text-gray-600 leading-none tracking-widest">
                                 SB
@@ -49,8 +51,8 @@ const Projects = () => (
                         </p>
                     </div>
                 </div>
-                <div className="flex w-full lg:w-1/3 px-3">
-                    <div className="w-full bg-gray-100 p-10 lg:p-15 xl:p-20">
+                <div className="flex w-full lg:w-1/3">
+                    <div className="mx-3 w-full bg-gray-100 p-10 lg:p-15 xl:p-20">
                         <div className="mb-5 rounded-full bg-gray-200 flex items-center justify-center shadow-inner product-preview">
                             <span className="text-base text-gray-600 leading-none tracking-widest">
                                 OR
@@ -66,7 +68,11 @@ const Projects = () => (
                 </div>
             </div>
             <div className="container">
-                <p className="text-base text-center text-blue-600 leading-none">All Projects -></p>
+                <div className="mx-8">
+                    <p className="text-base text-center text-blue-600 leading-none">
+                        All Projects ->
+                    </p>
+                </div>
             </div>
         </section>
     </>
