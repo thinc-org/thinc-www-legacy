@@ -6,7 +6,7 @@ const Footer = () => (
                     &copy; THINC. 2019
                 </p>
                 <p className="text-xs font-normal text-center text-gray-600 leading-none tracking-widest">
-                    DESIGNED & DEVELOPED BY PATCHARAPAT CHAIJAROEN
+                    DESIGNED BY PATCHARAPAT CHAIJAROEN
                 </p>
             </div>
         </div>
