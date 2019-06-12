@@ -233,6 +233,7 @@ module.exports = {
             default: '1'
         },
         fontFamily: {
+            headline: ['Poppins'],
             sans: [
                 'Inter',
                 '-apple-system',

@@ -43,7 +43,7 @@ const NavigationBar = ({ statusCode }) => {
                 style={{ height: HEIGHT }}>
                 <div className="container flex flex-row items-baseline justify-between">
                     <div className="flex flex-row items-baseline mx-8">
-                        <a href="#" className="text-xl font-bold">
+                        <a href="#" className="text-xl font-headline font-bold">
                             Thinc.
                         </a>
                         <div className="hidden">

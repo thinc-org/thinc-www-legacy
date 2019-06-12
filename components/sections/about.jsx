@@ -8,7 +8,9 @@ const About = () => (
             <div className="mx-8">
                 <div className="w-full flex flex-col">
                     <div className="w-full md:w-2/3">
-                        <p className="text-4xl font-bold leading-none text-black mb-10">About</p>
+                        <p className="text-4xl font-headline font-bold leading-none text-black mb-10">
+                            About
+                        </p>
                         <p className="text-base font-normal leading-relaxed">
                             <span className="font-bold">Thinc.</span> is a student-run community
                             aiming to make impact to society. A student community committed to
@@ -26,7 +28,9 @@ const About = () => (
                         <Icon className="text-purple-800 bg-purple-200 mr-5 mb-0 md:mb-5 lg:mb-0">
                             <MdStarBorder />
                         </Icon>
-                        <p className="text-xl font-bold text-purple-600">Real World Experience</p>
+                        <p className="text-xl font-headline font-bold text-purple-600">
+                            Real World Experience
+                        </p>
                     </div>
                     <p className="text-base font-normal text-gray-600 leading-relaxed">
                         Working closely with businesses to nurture professionalism in students
@@ -40,7 +44,7 @@ const About = () => (
                         <Icon className="text-orange-800 bg-orange-200 mr-5 mb-0 md:mb-5 lg:mb-0">
                             <MdLightbulbOutline />
                         </Icon>
-                        <p className="text-xl font-bold text-orange-600">
+                        <p className="text-xl font-headline font-bold text-orange-600">
                             Inspiration & Opportunity
                         </p>
                     </div>
@@ -56,7 +60,9 @@ const About = () => (
                         <Icon className="text-blue-800 bg-blue-200 mr-5 mb-0 md:mb-5 lg:mb-0">
                             <MdSearch />
                         </Icon>
-                        <p className="text-xl font-bold text-blue-600">Career Exploration</p>
+                        <p className="text-xl font-headline font-bold text-blue-600">
+                            Career Exploration
+                        </p>
                     </div>
                     <p className="text-base font-normal text-gray-600 leading-relaxed">
                         Students learn about career options and networking from weekly guest
