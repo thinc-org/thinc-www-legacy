@@ -22,7 +22,7 @@ const Projects = () => (
                     </div>
                 </div>
             </div>
-            <div className="w-full flex items-stretch flex-col lg:flex-row mb-20">
+            <div className="w-full flex items-stretch flex-col md:flex-row mb-20">
                 <div className="flex w-full lg:w-1/3 mb-3 lg:mb-0">
                     <Card className="flex flex-col justify-between bg-gray-100">
                         <div className="mb-5">
