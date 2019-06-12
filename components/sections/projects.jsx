@@ -22,7 +22,7 @@ const Projects = () => (
                     </div>
                 </div>
             </div>
-            <div className="w-full flex items-stretch flex-col lg:flex-row mb-20">
+            <div className="w-full flex items-stretch flex-col md:flex-row mb-20">
                 <div className="flex w-full lg:w-1/3 mb-3 lg:mb-0">
                     <Card className="flex flex-col justify-between bg-gray-100">
                         <div className="mb-5">
@@ -33,7 +33,7 @@ const Projects = () => (
                                         'url("https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/42/58/6b/42586b05-243c-94a1-6126-0b2a61b6076d/AppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-9.png/460x0w.jpg")'
                                 }}
                             />
-                            <p className="text-xl font-headline font-semibold text-black mb-5">
+                            <p className="text-xl font-headline font-medium text-black mb-5">
                                 Chula Pop Bus
                             </p>
                             <p className="text-base font-normal text-gray-600 leading-relaxed">
@@ -56,7 +56,7 @@ const Projects = () => (
                                     SB
                                 </span>
                             </div>
-                            <p className="text-xl font-headline font-semibold text-black mb-5">
+                            <p className="text-xl font-headline font-medium text-black mb-5">
                                 Starbario
                             </p>
                             <p className="text-base font-normal text-gray-600 leading-relaxed">
@@ -81,7 +81,7 @@ const Projects = () => (
                                     OR
                                 </span>
                             </div>
-                            <p className="text-xl font-headline font-semibold text-black mb-5">
+                            <p className="text-xl font-headline font-medium text-black mb-5">
                                 Open Registration
                             </p>
                             <p className="text-base font-normal text-gray-600 leading-relaxed">

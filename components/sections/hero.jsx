@@ -121,7 +121,7 @@ const Hero = () => (
                 <p className="text-6xl font-headline font-semibold leading-none text-gray-600 mb-3">
                     Impact
                 </p>
-                <p className="text-2xl font-headline font-semibold leading-relaxed text-gray-600">
+                <p className="text-2xl font-headline font-medium leading-relaxed text-gray-400">
                     Once a passion, now a profession.
                 </p>
             </div>
