@@ -19,7 +19,7 @@ class MyApp extends App {
 
         return (
             <Container>
-                <NavigationBar />
+                <NavigationBar {...pageProps} />
                 <Component {...pageProps} />
             </Container>
         )

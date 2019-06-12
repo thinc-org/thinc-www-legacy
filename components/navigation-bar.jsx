@@ -7,7 +7,7 @@ const NavigationBarSpacer = ({ className }) => (
     <div className={classNames('w-full', 'flex', className)} style={{ height: HEIGHT }} />
 )
 
-const NavigationBar = () => {
+const NavigationBar = ({ statusCode }) => {
     const [enableShadow, setEnableShadow] = useState(false)
     const handleScroll = e => {
         if (enableShadow) {
@@ -26,6 +26,9 @@ const NavigationBar = () => {
             window.removeEventListener('scroll', handleScroll)
         }
     }, [enableShadow])
+    if (statusCode && (statusCode === 404 || statusCode === 500)) {
+        return null
+    }
     return (
         <>
             <style jsx>{`
