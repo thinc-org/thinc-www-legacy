@@ -1,4 +1,6 @@
 import Card from '../../components/card'
+import Icon from '../../components/icon'
+import { MdLightbulbOutline, MdStarBorder, MdSearch } from 'react-icons/md'
 
 const About = () => (
     <section className="w-full bg-gray-100 py-20">
@@ -20,7 +22,12 @@ const About = () => (
         <div className="w-full flex items-stretch flex-col md:flex-row">
             <div className="flex w-full md:w-1/3 mb-3 md:mb-0">
                 <Card className="bg-white">
-                    <p className="text-xl font-bold text-black mb-5">Real World Experience</p>
+                    <div className="flex flex-row md:flex-col lg:flex-row items-baseline mb-5">
+                        <Icon className="text-purple-800 bg-purple-200 mr-5 mb-0 md:mb-5 lg:mb-0">
+                            <MdStarBorder />
+                        </Icon>
+                        <p className="text-xl font-bold text-purple-600">Real World Experience</p>
+                    </div>
                     <p className="text-base font-normal text-gray-600 leading-relaxed">
                         Working closely with businesses to nurture professionalism in students
                         through internship and projects.
@@ -29,7 +36,14 @@ const About = () => (
             </div>
             <div className="flex w-full md:w-1/3 mb-3 md:mb-0">
                 <Card className="bg-white">
-                    <p className="text-xl font-bold text-black mb-5">Inspiration & Opportunity</p>
+                    <div className="flex flex-row md:flex-col lg:flex-row items-baseline mb-5">
+                        <Icon className="text-orange-800 bg-orange-200 mr-5 mb-0 md:mb-5 lg:mb-0">
+                            <MdLightbulbOutline />
+                        </Icon>
+                        <p className="text-xl font-bold text-orange-600">
+                            Inspiration & Opportunity
+                        </p>
+                    </div>
                     <p className="text-base font-normal text-gray-600 leading-relaxed">
                         Students are given opportunities to pursue the areas that they are{' '}
                         <span className="text-black">truly passionate</span> about.
@@ -38,7 +52,12 @@ const About = () => (
             </div>
             <div className="flex w-full md:w-1/3">
                 <Card className="bg-white">
-                    <p className="text-xl font-bold text-black mb-5">Career Exploration</p>
+                    <div className="flex flex-row md:flex-col lg:flex-row items-baseline mb-5">
+                        <Icon className="text-blue-800 bg-blue-200 mr-5 mb-0 md:mb-5 lg:mb-0">
+                            <MdSearch />
+                        </Icon>
+                        <p className="text-xl font-bold text-blue-600">Career Exploration</p>
+                    </div>
                     <p className="text-base font-normal text-gray-600 leading-relaxed">
                         Students learn about career options and networking from weekly guest
                         speakers invited from all industries.
