@@ -8,7 +8,7 @@ const Teams = () => (
             <div className="mx-8">
                 <div className="w-full flex flex-col">
                     <div className="w-full md:w-2/3">
-                        <p className="text-4xl font-headline font-bold leading-none text-black">
+                        <p className="text-4xl font-headline font-semibold leading-none text-black">
                             Teams
                         </p>
                     </div>
@@ -22,7 +22,9 @@ const Teams = () => (
                         <Icon className="text-green-800 bg-green-200 mr-5 mb-0 md:mb-5 lg:mb-0">
                             <MdLightbulbOutline />
                         </Icon>
-                        <p className="text-xl font-headline font-bold text-green-600">Innovator</p>
+                        <p className="text-xl font-headline font-semibold text-green-600">
+                            Innovator
+                        </p>
                     </div>
                     <p className="text-base font-normal text-gray-600 leading-relaxed">
                         Innovators do various things related to marketing, research and management.
@@ -36,7 +38,9 @@ const Teams = () => (
                         <Icon className="text-pink-800 bg-pink-200 mr-5 mb-0 md:mb-5 lg:mb-0">
                             <MdEdit />
                         </Icon>
-                        <p className="text-xl font-headline font-bold text-pink-600">Designer</p>
+                        <p className="text-xl font-headline font-semibold text-pink-600">
+                            Designer
+                        </p>
                     </div>
                     <p className="text-base font-normal text-gray-600 leading-relaxed">
                         Designers design a product with creativity. They work in collaboration with
@@ -50,7 +54,9 @@ const Teams = () => (
                         <Icon className="text-indigo-800 bg-indigo-200 mr-5 mb-0 md:mb-5 lg:mb-0">
                             <MdCode />
                         </Icon>
-                        <p className="text-xl font-headline font-bold text-indigo-600">Developer</p>
+                        <p className="text-xl font-headline font-semibold text-indigo-600">
+                            Developer
+                        </p>
                     </div>
                     <p className="text-base font-normal text-gray-600 leading-relaxed">
                         Developers build a product. They work in collaboration with innovators and

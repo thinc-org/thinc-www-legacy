@@ -15,7 +15,7 @@ const Projects = () => (
                 <div className="mx-8">
                     <div className="w-full flex flex-col">
                         <div className="w-full md:w-2/3">
-                            <p className="text-4xl font-headline font-bold leading-none text-black">
+                            <p className="text-4xl font-headline font-semibold leading-none text-black">
                                 Projects
                             </p>
                         </div>
@@ -33,7 +33,7 @@ const Projects = () => (
                                         'url("https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/42/58/6b/42586b05-243c-94a1-6126-0b2a61b6076d/AppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-9.png/460x0w.jpg")'
                                 }}
                             />
-                            <p className="text-xl font-headline font-bold text-black mb-5">
+                            <p className="text-xl font-headline font-semibold text-black mb-5">
                                 Chula Pop Bus
                             </p>
                             <p className="text-base font-normal text-gray-600 leading-relaxed">
@@ -56,7 +56,7 @@ const Projects = () => (
                                     SB
                                 </span>
                             </div>
-                            <p className="text-xl font-headline font-bold text-black mb-5">
+                            <p className="text-xl font-headline font-semibold text-black mb-5">
                                 Starbario
                             </p>
                             <p className="text-base font-normal text-gray-600 leading-relaxed">
@@ -81,7 +81,7 @@ const Projects = () => (
                                     OR
                                 </span>
                             </div>
-                            <p className="text-xl font-headline font-bold text-black mb-5">
+                            <p className="text-xl font-headline font-semibold text-black mb-5">
                                 Open Registration
                             </p>
                             <p className="text-base font-normal text-gray-600 leading-relaxed">

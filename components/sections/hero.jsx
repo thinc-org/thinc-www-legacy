@@ -112,16 +112,16 @@ const Hero = () => (
         }}>
         <div className="w-full h-full flex items-center justify-center absolute top-0 z-20">
             <div className="flex flex-col mx-8">
-                <p className="text-6xl font-headline font-bold leading-none text-black mb-3">
+                <p className="text-6xl font-headline font-semibold leading-none text-black mb-3">
                     Thinc.
                 </p>
-                <p className="text-6xl font-headline font-bold leading-none text-gray-600 mb-3">
+                <p className="text-6xl font-headline font-semibold leading-none text-gray-600 mb-3">
                     Make
                 </p>
-                <p className="text-6xl font-headline font-bold leading-none text-gray-600 mb-3">
+                <p className="text-6xl font-headline font-semibold leading-none text-gray-600 mb-3">
                     Impact
                 </p>
-                <p className="text-2xl font-headline font-bold leading-relaxed text-gray-600">
+                <p className="text-2xl font-headline font-semibold leading-relaxed text-gray-600">
                     Once a passion, now a profession.
                 </p>
             </div>
