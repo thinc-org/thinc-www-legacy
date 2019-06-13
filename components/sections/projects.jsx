@@ -13,9 +13,9 @@ const Projects = () => (
         <section className="bg-white py-20">
             <div className="container mb-20">
                 <div className="mx-8">
-                    <div className="w-full flex flex-col">
+                    <div className="w-full flex justify-center flex-row">
                         <div className="w-full md:w-2/3">
-                            <p className="text-4xl font-headline font-semibold leading-none text-black">
+                            <p className="text-4xl text-center font-headline font-semibold leading-none text-black">
                                 Projects
                             </p>
                         </div>

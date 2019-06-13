@@ -6,12 +6,12 @@ const About = () => (
     <section className="w-full bg-gray-100 py-20">
         <div className="container mb-20">
             <div className="mx-8">
-                <div className="w-full flex flex-col">
+                <div className="w-full flex justify-center flex-row">
                     <div className="w-full md:w-2/3">
-                        <p className="text-4xl font-headline font-semibold leading-none text-black mb-10">
+                        <p className="text-4xl text-center font-headline font-semibold leading-none text-black mb-10">
                             About
                         </p>
-                        <p className="text-base font-normal leading-relaxed">
+                        <p className="text-base text-center font-normal leading-relaxed">
                             <span className="font-bold">Thinc.</span> is a student-run community
                             aiming to make impact to society. A student community committed to
                             promoting real-world profession skills with the goal of incubating the
