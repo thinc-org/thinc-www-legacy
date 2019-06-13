@@ -13,9 +13,9 @@ const Projects = () => (
         <section className="bg-white py-20">
             <div className="container mb-20">
                 <div className="mx-8">
-                    <div className="w-full flex flex-col">
+                    <div className="w-full flex justify-center flex-row">
                         <div className="w-full md:w-2/3">
-                            <p className="text-4xl font-headline font-semibold leading-none text-black">
+                            <p className="text-4xl text-center font-headline font-semibold leading-none text-black">
                                 Projects
                             </p>
                         </div>
@@ -23,7 +23,7 @@ const Projects = () => (
                 </div>
             </div>
             <div className="w-full flex items-stretch flex-col md:flex-row mb-20">
-                <div className="flex w-full lg:w-1/3 mb-3 lg:mb-0">
+                <div className="flex w-full lg:w-1/3 mb-3 md:mb-0">
                     <Card className="flex flex-col justify-between bg-gray-100">
                         <div className="mb-5">
                             <div
@@ -48,7 +48,7 @@ const Projects = () => (
                         </div>
                     </Card>
                 </div>
-                <div className="flex w-full lg:w-1/3 mb-3 lg:mb-0">
+                <div className="flex w-full lg:w-1/3 mb-3 md:mb-0">
                     <Card className="flex flex-col justify-between bg-gray-100">
                         <div className="mb-5">
                             <div className="mb-5 rounded-full bg-gray-200 flex items-center justify-center border product-preview">
