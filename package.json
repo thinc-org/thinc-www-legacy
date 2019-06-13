@@ -15,7 +15,8 @@
         "dev": "next",
         "build": "next build",
         "start": "next start",
-        "now-build": "next build"
+        "now-build": "next build",
+        "export": "next export"
     },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^1.2.0",
