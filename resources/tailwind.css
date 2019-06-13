@@ -1,21 +1,16 @@
 @import 'https://rsms.me/inter/inter.css';
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
 
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
-
-html {
-    font-size: 16px;
-}
-
-html,
-body {
+p {
     /* Prevent Font Size Scaling */
     text-size-adjust: none;
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
 }
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;

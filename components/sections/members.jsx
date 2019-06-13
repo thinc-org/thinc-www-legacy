@@ -9,7 +9,13 @@ const Profile = ({ avatarURL, profileURL, username }) => (
                 height: 30px;
             }
             #profile {
+                transform: scale(1);
+                opacity: 1;
                 transition: 0.2s all cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+            #profile:active {
+                opacity: 0.5;
+                transform: scale(0.95);
             }
         `}</style>
         <div className="inline-block m-2">
@@ -23,7 +29,7 @@ const Profile = ({ avatarURL, profileURL, username }) => (
                     id="profile"
                     className="bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-3 rounded-lg">
                     <div className="flex flex-row items-center">
-                        <img className="rounded-full mr-4" src={avatarURL} />
+                        <img className="rounded-full mr-3" src={avatarURL} />
                         <p className="text-sm">
                             <span className="opacity-25">@ </span>
                             {username}
