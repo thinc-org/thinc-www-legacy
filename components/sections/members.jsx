@@ -69,6 +69,7 @@ const Members = () => {
                                 avatarURL={value.avatar_url}
                                 profileURL={value.html_url}
                                 imageAlt={`member_$index`}
+                                key={index}
                             />
                         )
                     })}
