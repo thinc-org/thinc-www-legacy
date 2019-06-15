@@ -66,7 +66,7 @@ const Members = () => {
                         return (
                             <Profile
                                 username={value.login}
-                                avatarURL={value.avatar_url}
+                                avatarURL={value.avatar_url + '&s=30'}
                                 profileURL={value.html_url}
                                 imageAlt={`member_$index`}
                                 key={index}
