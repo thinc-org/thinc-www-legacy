@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import fetch from 'isomorphic-unfetch'
 
-const Profile = ({ avatarURL, profileURL, username }) => (
+const Profile = ({ avatarURL, profileURL, username, imageAlt }) => (
     <>
         <style jsx>{`
             img {
@@ -29,7 +29,7 @@ const Profile = ({ avatarURL, profileURL, username }) => (
                     id="profile"
                     className="bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-3 rounded-lg">
                     <div className="flex flex-row items-center">
-                        <img className="rounded-full mr-3" src={avatarURL} />
+                        <img alt={imageAlt} className="rounded-full mr-3" src={avatarURL} />
                         <p className="text-sm">
                             <span className="opacity-25">@ </span>
                             {username}
@@ -68,6 +68,7 @@ const Members = () => {
                                 username={value.login}
                                 avatarURL={value.avatar_url}
                                 profileURL={value.html_url}
+                                imageAlt={`member_$index`}
                             />
                         )
                     })}
