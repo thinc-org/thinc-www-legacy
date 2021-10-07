@@ -10,23 +10,23 @@ import Teams from '../components/sections/teams'
 import Footer from '../components/sections/footer'
 
 const Members = dynamic(() => import('../components/sections/members'), {
-    ssr: false
+  ssr: false,
 })
 
 const Index = () => (
-    <>
-        <Head>
-            <title>Thinc.</title>
-        </Head>
-        <NavigationBarSpacer />
-        <Recruiting />
-        <Hero />
-        <About />
-        <Projects />
-        <Teams />
-        <Members />
-        <Footer />
-    </>
+  <>
+    <Head>
+      <title>Thinc.</title>
+    </Head>
+    <NavigationBarSpacer />
+    <Recruiting />
+    <Hero />
+    <About />
+    <Projects />
+    <Teams />
+    <Members />
+    <Footer />
+  </>
 )
 
 export default Index
