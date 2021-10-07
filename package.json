@@ -25,6 +25,7 @@
         "@zeit/next-css": "^1.0.1",
         "autoprefixer": "^9.6.0",
         "cssnano": "^4.1.10",
+        "husky": "^7.0.2",
         "lint-staged": "^11.2.0",
         "prettier": "^2.4.1",
         "tailwindcss": "^1.0.3"
