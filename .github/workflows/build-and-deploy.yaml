@@ -1,7 +1,7 @@
 name: Build and Deploy
 on:
   push:
-    branches: [build/auto-deploy]
+    branches: [master]
 jobs:
   build-and-deploy:
     strategy:
