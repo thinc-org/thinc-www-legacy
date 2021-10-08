@@ -1,6 +1,6 @@
 name: Build and Deploy
 on: [push]
-# branch: master
+branch: build/auto-deploy
 jobs:
   build-and-deploy:
     strategy:
@@ -23,7 +23,7 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
-     - name: Install dependencies
+      - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --fronzen-lockfile
 
