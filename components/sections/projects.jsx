@@ -1,4 +1,7 @@
+import { MdOpenInNew } from 'react-icons/md'
+
 import Card from '../../components/card'
+import Icon from '../../components/icon'
 
 const Projects = () => (
   <>
@@ -36,6 +39,7 @@ const Projects = () => (
             <a href="https://cugetreg.com" target="_blank" rel="noopener noreferrer">
               <button className="bg-black px-4 py-2 rounded text-white text-xs tracking-widest uppercase">
                 BROWSE <span className="font-bold">NOW</span>
+                <MdOpenInNew className="inline text-sm ml-1" />
               </button>
             </a>
           </Card>
