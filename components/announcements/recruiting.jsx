@@ -8,8 +8,8 @@ const Recruiting = () => (
               Hello, CU105
             </p>
             <p className="text-base text-center font-normal leading-loose mb-10">
-              Welcome to <span className="font-bold">Thinc.</span>! Please join
-              our Facebook Group for updates on events and activities.
+              Welcome to <span className="font-bold">Thinc.</span>! Please join our Facebook Group for updates on events
+              and activities.
             </p>
             <a
               target="_blank"
@@ -20,15 +20,14 @@ const Recruiting = () => (
               JOIN <span className="font-bold">FACEBOOK GROUP</span>
             </a>
             <p className="text-sm text-gray-600 text-center font-normal leading-loose">
-              or search for "<span className="font-bold">Thinc. 9th Gen</span>"
-              in your FB application!
+              or search for "<span className="font-bold">Thinc. 9th Gen</span>" in your FB application!
             </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-);
+)
 // null
 
-export default Recruiting;
+export default Recruiting
