@@ -37,7 +37,7 @@ const Profile = ({ avatarURL, profileURL, username, imageAlt }) => (
 const Members = () => {
   const [members, setMembers] = useState([])
   useEffect(() => {
-    ;(async function fetchAPI() {
+    ; (async function fetchAPI() {
       const data = await (await fetch(`https://api.github.com/orgs/thinc-org/public_members`)).json()
       data.sort((a, b) => a.login.localeCompare(b.login))
       setMembers(data)
@@ -82,7 +82,7 @@ const Members = () => {
             <a href="https://github.com/orgs/thinc-org/people" className="inline-block m-2">
               <div className="bg-gray-200 text-gray-600 hover:bg-gray-300 hover:underline px-4 py-3 rounded-lg">
                 <div className="flex flex-row items-center">
-                  <p className="text-sm">All Members -></p>
+                  <p className="text-sm">All Members {'->'}</p>
                 </div>
               </div>
             </a>
