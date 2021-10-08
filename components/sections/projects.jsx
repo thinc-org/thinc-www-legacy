@@ -24,6 +24,48 @@ const Projects = () => (
         <div className="flex w-full lg:w-1/3 mb-3 md:mb-0">
           <Card className="flex flex-col justify-between bg-gray-100">
             <div className="mb-5">
+              <img
+                className="mb-5 rounded-full bg-gray-200 flex items-center justify-center border product-preview"
+                src="/static/cgr-logo.png"
+              ></img>
+              <p className="text-xl font-headline font-medium text-black mb-5">CU Get Reg</p>
+              <p className="text-base font-normal text-gray-600 leading-relaxed">
+                Reg Chula One Stop Service for all Chula students.
+              </p>
+            </div>
+            <a href="https://cugetreg.com" target="_blank" rel="noopener noreferrer">
+              <button className="bg-black px-4 py-2 rounded text-white text-xs tracking-widest uppercase">
+                BROWSE <span className="font-bold">NOW</span>
+              </button>
+            </a>
+          </Card>
+        </div>
+        <div className="flex w-full lg:w-1/3">
+          <Card className="flex flex-col justify-between bg-gray-100">
+            <div className="mb-5">
+              <img
+                className="mb-5 rounded-full bg-white flex items-center justify-center border product-preview"
+                src="/static/cusc-logo.png"
+              ></img>
+              <p className="text-xl font-headline font-medium text-black mb-5">Sports Complex Booking</p>
+              <p className="text-base font-normal text-gray-600 leading-relaxed">
+                Tired of running to the sports complex early every day? Now, you can book your reservations anytime and
+                anywhere.
+              </p>
+            </div>
+            <div>
+              <button
+                disabled
+                className="bg-transparent px-4 py-2 rounded text-gray-600 border text-xs tracking-widest uppercase cursor-auto"
+              >
+                COMING EARLY 2022
+              </button>
+            </div>
+          </Card>
+        </div>
+        <div className="flex w-full lg:w-1/3 mb-3 md:mb-0">
+          <Card className="flex flex-col justify-between bg-gray-100">
+            <div className="mb-5">
               <div
                 className="mb-5 rounded-full bg-gray-200 flex items-center justify-center border product-preview"
                 style={{
@@ -36,50 +78,6 @@ const Projects = () => (
                 Never get lost in Chula again! Chula Pop Bus App helps make navigation through Chulalongkorn University
                 much easier.
               </p>
-            </div>
-            <div>
-              <button className="bg-black px-4 py-2 rounded text-white text-xs tracking-widest uppercase">
-                DOWNLOAD
-              </button>
-            </div>
-          </Card>
-        </div>
-        <div className="flex w-full lg:w-1/3 mb-3 md:mb-0">
-          <Card className="flex flex-col justify-between bg-gray-100">
-            <div className="mb-5">
-              <div className="mb-5 rounded-full bg-gray-200 flex items-center justify-center border product-preview">
-                <span className="text-base text-gray-600 leading-none tracking-widest">SB</span>
-              </div>
-              <p className="text-xl font-headline font-medium text-black mb-5">Starbario</p>
-              <p className="text-base font-normal text-gray-600 leading-relaxed">
-                Do you suffer from ordering Starbucks? Maybe your beverage name is too long? Starbario, the LINE bot,
-                helps make your ordering process easier! Type in your beverage name in Thai and instantly get a
-                Starbucks-formatted name for it.
-              </p>
-            </div>
-            <div>
-              <button className="bg-black px-4 py-2 rounded text-white text-xs tracking-widest uppercase">
-                OPEN IN <span className="font-bold">LINE</span>
-              </button>
-            </div>
-          </Card>
-        </div>
-        <div className="flex w-full lg:w-1/3">
-          <Card className="flex flex-col justify-between bg-gray-100">
-            <div className="mb-5">
-              <div className="mb-5 rounded-full bg-gray-200 flex items-center justify-center border product-preview">
-                <span className="text-base text-gray-600 leading-none tracking-widest">OR</span>
-              </div>
-              <p className="text-xl font-headline font-medium text-black mb-5">Open Registration</p>
-              <p className="text-base font-normal text-gray-600 leading-relaxed">
-                Reg Chula is one of the best platform on the Internet. Open Registration pushes that further. This
-                platform provides everything you need in order to survive in Chulalongkorn University.
-              </p>
-            </div>
-            <div>
-              <button className="bg-transparent px-4 py-2 rounded text-gray-600 border text-xs tracking-widest uppercase">
-                COMING THIS AUGUST
-              </button>
             </div>
           </Card>
         </div>
