@@ -1,6 +1,7 @@
+import { MdLightbulbOutline, MdEdit, MdCode } from 'react-icons/md'
+
 import Card from '../../components/card'
 import Icon from '../../components/icon'
-import { MdLightbulbOutline, MdEdit, MdCode } from 'react-icons/md'
 
 const Teams = () => (
   <section className="w-full bg-gray-100 py-20">

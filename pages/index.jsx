@@ -1,13 +1,13 @@
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
-import { NavigationBarSpacer } from '../components/navigation-bar'
 import Recruiting from '../components/announcements/recruiting'
-import Hero from '../components/sections/hero'
+import { NavigationBarSpacer } from '../components/navigation-bar'
 import About from '../components/sections/about'
+import Footer from '../components/sections/footer'
+import Hero from '../components/sections/hero'
 import Projects from '../components/sections/projects'
 import Teams from '../components/sections/teams'
-import Footer from '../components/sections/footer'
 
 const Members = dynamic(() => import('../components/sections/members'), {
   ssr: false,

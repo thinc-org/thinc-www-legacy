@@ -1,5 +1,6 @@
-import React from 'react'
 import App, { Container } from 'next/app'
+import React from 'react'
+
 import { NavigationBar } from '../components/navigation-bar'
 import '../resources/tailwind.css'
 
