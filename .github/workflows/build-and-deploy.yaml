@@ -1,6 +1,6 @@
 name: Build and Deploy
 on: [push]
-branch: build/auto-deploy
+branches: [build/auto-deploy]
 jobs:
   build-and-deploy:
     strategy:
