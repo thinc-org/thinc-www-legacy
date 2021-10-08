@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
 import fetch from 'isomorphic-unfetch'
+import { useState, useEffect } from 'react'
 
 const Profile = ({ avatarURL, profileURL, username, imageAlt }) => (
   <>
