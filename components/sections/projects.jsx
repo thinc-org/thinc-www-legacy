@@ -33,7 +33,8 @@ const Projects = () => (
               ></img>
               <p className="text-xl font-headline font-medium text-black mb-5">CU Get Reg</p>
               <p className="text-base font-normal text-gray-600 leading-relaxed">
-                Reg Chula One Stop Service for all Chula students.
+                Have no idea what courses to take? Don't know what this course is about? We got it covered. With CU Get
+                Reg, we put all kinds of course data together so that you don't have to.
               </p>
             </div>
             <a href="https://cugetreg.com" target="_blank" rel="noopener noreferrer">
