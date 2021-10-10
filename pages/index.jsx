@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
-import Recruiting from '../components/announcements/recruiting'
 import { NavigationBarSpacer } from '../components/navigation-bar'
 import About from '../components/sections/about'
 import Footer from '../components/sections/footer'
@@ -10,6 +9,10 @@ import Projects from '../components/sections/projects'
 import Teams from '../components/sections/teams'
 
 const Members = dynamic(() => import('../components/sections/members'), {
+  ssr: false,
+})
+
+const Recruiting = dynamic(() => import('../components/announcements/recruiting'), {
   ssr: false,
 })
 
