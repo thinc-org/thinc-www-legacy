@@ -6,12 +6,7 @@ const ThincGeneration = () => {
   // Note: Javascript count January as 0
   const currentCUGeneration = differenceInYears(new Date(), new Date(1916, 6, 31))
   const currentThincGeneration = currentCUGeneration - 96
-  return (
-    <p className="text-sm text-gray-600 text-center font-normal leading-loose">
-      or search for "<span className="font-bold">Thinc. {ordinal(currentThincGeneration)} Gen</span>" in your FB
-      application!
-    </p>
-  )
+  return <span>{ordinal(currentThincGeneration)}</span>
 }
 
 export default ThincGeneration

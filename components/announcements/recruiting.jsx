@@ -15,7 +15,10 @@ const Recruiting = () => {
         <div className="mx-8">
           <div className="w-full flex justify-center flex-row">
             <div className="w-full flex flex-col items-center md:w-2/3">
-              <CUGeneration />
+              <p className="text-4xl text-center font-headline font-semibold leading-none text-black mb-10">
+                Hello, CU
+                <CUGeneration />
+              </p>
               <p className="text-base text-center font-normal leading-loose mb-10">
                 Welcome to <span className="font-bold">Thinc.</span>! Please join our Facebook Group for updates on
                 events and activities.
@@ -38,7 +41,14 @@ const Recruiting = () => {
                   VISIT <span className="ml-1 font-bold"> FACEBOOK PAGE</span>
                 </a>
               </div>
-              <ThincGeneration />
+              <p className="text-sm text-gray-600 text-center font-normal leading-loose">
+                or search for "
+                <span className="font-bold">
+                  Thinc. <ThincGeneration />
+                  Gen
+                </span>
+                " in your FB application!
+              </p>
             </div>
           </div>
         </div>
