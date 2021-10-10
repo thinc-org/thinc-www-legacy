@@ -1,21 +1,21 @@
-import differenceInYears from 'date-fns/differenceInYears'
-import ordinal from 'ordinal'
+import dynamic from 'next/dynamic'
+
+const CUGeneration = dynamic(() => import('./cuGeneration'), {
+  ssr: false,
+})
+
+const ThincGeneration = dynamic(() => import('./thincGeneration'), {
+  ssr: false,
+})
 
 const Recruiting = () => {
-  // Assume: increase generation every 31st July of every year
-  // Note: Javascript count January as 0
-  const currentCUGeneration = differenceInYears(new Date(), new Date(1916, 6, 31))
-  const currentThincGeneration = currentCUGeneration - 96
-
   return (
     <section className="w-full bg-pink-100 py-20">
       <div className="container">
         <div className="mx-8">
           <div className="w-full flex justify-center flex-row">
             <div className="w-full flex flex-col items-center md:w-2/3">
-              <p className="text-4xl text-center font-headline font-semibold leading-none text-black mb-10">
-                Hello, CU{currentCUGeneration}
-              </p>
+              <CUGeneration />
               <p className="text-base text-center font-normal leading-loose mb-10">
                 Welcome to <span className="font-bold">Thinc.</span>! Please join our Facebook Group for updates on
                 events and activities.
@@ -38,10 +38,7 @@ const Recruiting = () => {
                   VISIT <span className="ml-1 font-bold"> FACEBOOK PAGE</span>
                 </a>
               </div>
-              <p className="text-sm text-gray-600 text-center font-normal leading-loose">
-                or search for "<span className="font-bold">Thinc. {ordinal(currentThincGeneration)} Gen</span>" in your
-                FB application!
-              </p>
+              <ThincGeneration />
             </div>
           </div>
         </div>
@@ -49,6 +46,5 @@ const Recruiting = () => {
     </section>
   )
 }
-// null
 
 export default Recruiting
