@@ -12,12 +12,12 @@ const Recruiting = () => {
                 Welcome to <span className="font-bold">Thinc.</span>! Please join our Facebook Group for updates on
                 events and activities.
               </p>
-              <div className="flex gap-x-5 mb-5">
+              <div className="flex gap-x-5 mb-5 flex-col md:flex-row">
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://fb.com/groups/794863941175364"
-                  className="bg-pink-600 px-4 py-2 rounded text-white text-xs tracking-widest flex items-center hover:bg-pink-700 transition duration-200 ease-in"
+                  className="border-2 border-pink-600 bg-pink-600 mb-3 md:mb-0 px-4 py-2 rounded text-white text-xs tracking-widest text-center hover:bg-pink-700 transition duration-200"
                 >
                   JOIN <span className="ml-1 font-bold">FACEBOOK GROUP</span>
                 </a>
@@ -25,7 +25,7 @@ const Recruiting = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://www.facebook.com/ThailandIncubator"
-                  className="bg-white box-border border-2 border-pink-600 px-4 py-2 rounded text-pink-600 text-xs tracking-widest flex items-center hover:bg-pink-100 transition duration-200 ease-in"
+                  className="border-2 border-pink-600 bg-white px-4 py-2 rounded text-pink-600 text-xs tracking-widest text-center hover:bg-pink-100 transition duration-200 ease-in"
                 >
                   VISIT <span className="ml-1 font-bold"> FACEBOOK PAGE</span>
                 </a>
