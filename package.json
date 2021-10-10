@@ -8,6 +8,7 @@
     "date-fns": "^2.25.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^8.1.0",
+    "ordinal": "^1.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",

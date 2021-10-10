@@ -1,24 +1,5 @@
 import differenceInYears from 'date-fns/differenceInYears'
-
-function ordinal(num) {
-  num = Math.round(num)
-  let numString = num.toString()
-
-  if (Math.floor(num / 10) % 10 === 1) {
-    return numString + 'th'
-  }
-
-  switch (num % 10) {
-    case 1:
-      return numString + 'st'
-    case 2:
-      return numString + 'nd'
-    case 3:
-      return numString + 'rd'
-    default:
-      return numString + 'th'
-  }
-}
+import ordinal from 'ordinal'
 
 const Recruiting = () => {
   // Assume: increase generation every 31st July of every year
