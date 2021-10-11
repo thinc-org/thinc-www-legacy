@@ -7,14 +7,11 @@ class Error extends React.Component {
   }
 
   render() {
-    // return (
-    //     <p>
-    //         {this.props.statusCode
-    //             ? `An error ${this.props.statusCode} occurred on server`
-    //             : 'An error occurred on client'}
-    //     </p>
-    // )
-    return <img src="/static/404.jpg" alt={500} />
+    return (
+      <p>
+        {this.props.statusCode ? `An error ${this.props.statusCode} occurred on server` : 'An error occurred on client'}
+      </p>
+    )
   }
 }
 
