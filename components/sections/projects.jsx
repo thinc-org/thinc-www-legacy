@@ -1,7 +1,7 @@
+import Image from 'next/image'
 import { MdOpenInNew } from 'react-icons/md'
 
 import Card from '../../components/card'
-import Icon from '../../components/icon'
 
 const Projects = () => (
   <>
@@ -27,10 +27,13 @@ const Projects = () => (
         <div className="flex w-full lg:w-1/3 mb-3 md:mb-0">
           <Card className="flex flex-col justify-between bg-gray-100">
             <div className="mb-5">
-              <img
+              <Image
+                width="80"
+                height="80"
                 className="mb-5 rounded-full bg-gray-200 flex items-center justify-center border product-preview"
+                alt="CU Get Reg Logo"
                 src="/static/cgr-logo.png"
-              ></img>
+              />
               <p className="text-xl font-headline font-medium text-black mb-5">CU Get Reg</p>
               <p className="text-base font-normal text-gray-600 leading-relaxed">
                 Have no idea what courses to take? Don't know what this course is about? We got it covered. With CU Get
@@ -48,10 +51,13 @@ const Projects = () => (
         <div className="flex w-full lg:w-1/3">
           <Card className="flex flex-col justify-between bg-gray-100">
             <div className="mb-5">
-              <img
+              <Image
+                width="80"
+                height="80"
                 className="mb-5 rounded-full bg-white flex items-center justify-center border product-preview"
+                alt="CU Sports Complex Logo"
                 src="/static/cusc-logo.png"
-              ></img>
+              />
               <p className="text-xl font-headline font-medium text-black mb-5">Sports Complex Booking</p>
               <p className="text-base font-normal text-gray-600 leading-relaxed">
                 Tired of running to the sports complex early every day? Now, you can book your reservations anytime and
