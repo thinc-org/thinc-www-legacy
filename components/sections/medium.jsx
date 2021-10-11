@@ -5,7 +5,7 @@ const Medium = ({ feeds }) => {
     const creatorFirstLetter = feed.creator[0]
     const date = format(new Date(feed.date), 'MMM dd, yyyy')
     return (
-      <>
+      <div key={feed.link}>
         <style jsx>{`
           .medium-article-img {
             max-width: 330px;
@@ -19,44 +19,42 @@ const Medium = ({ feeds }) => {
             }
           }
         `}</style>
-        <div>
-          {feed.imgSrc ? (
-            <a
-              href={feed.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border flex medium-article-img"
-              style={{
-                backgroundImage: `url(${feed.imgSrc})`,
-              }}
-            />
-          ) : (
-            <a
-              href={feed.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border flex medium-article-img bg-gray-700 items-center justify-center text-white text-2xl"
-            >
-              <span>Thinc.</span>
-            </a>
-          )}
-          <a href={feed.link} target="_blank" rel="noopener noreferrer">
-            <h6 className="mt-4 text-2xl font-bold ">{feed.title}</h6>
+        {feed.imgSrc ? (
+          <a
+            href={feed.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border flex medium-article-img"
+            style={{
+              backgroundImage: `url(${feed.imgSrc})`,
+            }}
+          />
+        ) : (
+          <a
+            href={feed.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border flex medium-article-img bg-gray-700 items-center justify-center text-white text-2xl"
+          >
+            <span>Thinc.</span>
           </a>
-          <div className="flex items-center mt-2">
-            <div
-              className="rounded-full border bg-teal-500 text-white text-center p-1"
-              style={{ width: '36px', height: '36px' }}
-            >
-              {creatorFirstLetter}
-            </div>
-            <div className="ml-2 flex flex-col">
-              <p className="text-yellow-800">{feed.creator}</p>
-              <p className="text-gray-600 text-sm">{date}</p>
-            </div>
+        )}
+        <a href={feed.link} target="_blank" rel="noopener noreferrer">
+          <h6 className="mt-4 text-2xl font-bold ">{feed.title}</h6>
+        </a>
+        <div className="flex items-center mt-2">
+          <div
+            className="rounded-full border bg-teal-500 text-white text-center p-1"
+            style={{ width: '36px', height: '36px' }}
+          >
+            {creatorFirstLetter}
+          </div>
+          <div className="ml-2 flex flex-col">
+            <p className="text-yellow-800">{feed.creator}</p>
+            <p className="text-gray-600 text-sm">{date}</p>
           </div>
         </div>
-      </>
+      </div>
     )
   })
 
