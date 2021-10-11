@@ -2,10 +2,12 @@ import dynamic from 'next/dynamic'
 
 const CUGeneration = dynamic(() => import('./cuGeneration'), {
   ssr: false,
+  loading: () => <span>1</span>,
 })
 
 const ThincGeneration = dynamic(() => import('./thincGeneration'), {
   ssr: false,
+  loading: () => <span>1st</span>,
 })
 
 const Recruiting = () => {
