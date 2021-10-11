@@ -1,5 +1,7 @@
+import getSrc from 'get-src'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+import Parser from 'rss-parser'
 
 import Recruiting from '../components/announcements/recruiting'
 import { NavigationBarSpacer } from '../components/navigation-bar'
@@ -14,7 +16,7 @@ const Members = dynamic(() => import('../components/sections/members'), {
   ssr: false,
 })
 
-const Index = () => (
+const Index = ({ mediumFeed }) => (
   <>
     <Head>
       <title>Thinc.</title>
@@ -25,10 +27,28 @@ const Index = () => (
     <About />
     <Projects />
     <Teams />
-    <Medium />
+    <Medium feeds={mediumFeed} />
     <Members />
     <Footer />
   </>
 )
 
 export default Index
+
+export async function getStaticProps() {
+  const parser = new Parser()
+  const feed = await parser.parseURL('https://medium.com/feed/thinc-org')
+  const processedFeed = feed.items.slice(0, 6).map((item) => {
+    return {
+      title: item.title,
+      date: item.pubDate,
+      creator: item.creator,
+      link: item.link,
+      imgSrc: getSrc(item['content:encoded']),
+    }
+  })
+
+  return {
+    props: { mediumFeed: processedFeed },
+  }
+}

@@ -1,29 +1,6 @@
 import format from 'date-fns/format'
-import getSrc from 'get-src'
-import fetch from 'isomorphic-unfetch'
-import { useState, useEffect } from 'react'
-import Parser from 'rss-parser'
 
-let parser = new Parser()
-
-const Medium = () => {
-  const [feeds, setFeeds] = useState([])
-  useEffect(() => {
-    ;(async function fetchAPI() {
-      let feed = await parser.parseURL('https://medium.com/feed/thinc-org')
-      const processedFeed = feed.items.slice(0, 6).map((item) => {
-        return {
-          title: item.title,
-          date: item.pubDate,
-          creator: item.creator,
-          link: item.link,
-          imgSrc: getSrc(item['content:encoded']),
-        }
-      })
-      setFeeds(processedFeed)
-    })()
-  }, [])
-
+const Medium = ({ feeds }) => {
   const mediumFeed = feeds.map((feed) => {
     const creatorFirstLetter = feed.creator[0]
     const date = format(new Date(feed.date), 'MMM dd, yyyy')
