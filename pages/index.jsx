@@ -39,12 +39,13 @@ export async function getStaticProps() {
   const parser = new Parser()
   const feed = await parser.parseURL('https://medium.com/feed/thinc-org')
   const processedFeed = feed.items.slice(0, 6).map((item) => {
+    const imgSrc = getSrc(item['content:encoded']).replace('/1024/', '/400/')
     return {
       title: item.title,
       date: item.pubDate,
       creator: item.creator,
       link: item.link,
-      imgSrc: getSrc(item['content:encoded']),
+      imgSrc,
     }
   })
 
