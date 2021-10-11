@@ -19,7 +19,14 @@ const Profile = ({ avatarURL, profileURL, username, imageAlt }) => (
       }
     `}</style>
     <div className="inline-block m-2">
-      <a className="no-underline" alt={username} title={username} href={profileURL} target="_blank">
+      <a
+        className="no-underline"
+        alt={username}
+        title={username}
+        href={profileURL}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div id="profile" className="bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-3 rounded-lg">
           <div className="flex flex-row items-center">
             <img alt={imageAlt} className="rounded-full mr-3" src={avatarURL} />
@@ -36,13 +43,13 @@ const Profile = ({ avatarURL, profileURL, username, imageAlt }) => (
 
 const Members = () => {
   const [members, setMembers] = useState([])
-  useEffect(() => {
-    ; (async function fetchAPI() {
-      const data = await (await fetch(`https://api.github.com/orgs/thinc-org/public_members`)).json()
-      data.sort((a, b) => a.login.localeCompare(b.login))
-      setMembers(data)
-    })()
-  }, [])
+  // useEffect(() => {
+  //   ;(async function fetchAPI() {
+  //     const data = await (await fetch(`https://api.github.com/orgs/thinc-org/public_members`)).json()
+  //     data.sort((a, b) => a.login.localeCompare(b.login))
+  //     setMembers(data)
+  //   })()
+  // }, [])
   const renderProfiles = () => {
     if (members.length === 0) {
       return <p className="text-xs tracking-widest text-gray-600">CHOTTO MATTE KUDASAI ~ {'<3'}</p>
@@ -79,7 +86,12 @@ const Members = () => {
             <div className="w-full flex justify-center">
               <div className="inline-block text-center">{renderProfiles()}</div>
             </div>
-            <a href="https://github.com/orgs/thinc-org/people" className="inline-block m-2">
+            <a
+              href="https://github.com/orgs/thinc-org/people"
+              className="inline-block m-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="bg-gray-200 text-gray-600 hover:bg-gray-300 hover:underline px-4 py-3 rounded-lg">
                 <div className="flex flex-row items-center">
                   <p className="text-sm">All Members {'->'}</p>

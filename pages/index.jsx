@@ -6,6 +6,7 @@ import { NavigationBarSpacer } from '../components/navigation-bar'
 import About from '../components/sections/about'
 import Footer from '../components/sections/footer'
 import Hero from '../components/sections/hero'
+import Medium from '../components/sections/medium'
 import Projects from '../components/sections/projects'
 import Teams from '../components/sections/teams'
 
@@ -24,6 +25,7 @@ const Index = () => (
     <About />
     <Projects />
     <Teams />
+    <Medium />
     <Members />
     <Footer />
   </>
