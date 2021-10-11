@@ -43,13 +43,13 @@ const Profile = ({ avatarURL, profileURL, username, imageAlt }) => (
 
 const Members = () => {
   const [members, setMembers] = useState([])
-  // useEffect(() => {
-  //   ;(async function fetchAPI() {
-  //     const data = await (await fetch(`https://api.github.com/orgs/thinc-org/public_members`)).json()
-  //     data.sort((a, b) => a.login.localeCompare(b.login))
-  //     setMembers(data)
-  //   })()
-  // }, [])
+  useEffect(() => {
+    ;(async function fetchAPI() {
+      const data = await (await fetch(`https://api.github.com/orgs/thinc-org/public_members`)).json()
+      data.sort((a, b) => a.login.localeCompare(b.login))
+      setMembers(data)
+    })()
+  }, [])
   const renderProfiles = () => {
     if (members.length === 0) {
       return <p className="text-xs tracking-widest text-gray-600">CHOTTO MATTE KUDASAI ~ {'<3'}</p>
