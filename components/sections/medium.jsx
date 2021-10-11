@@ -125,7 +125,7 @@ const Medium = () => {
                   </a>
                 </div>
               </div>
-              <h6 className="text-2xl text-left">Publications</h6>
+              <h6 className="text-2xl self-start font-bold">Publications</h6>
               <div className="medium-article-container mt-4">{mediumFeed}</div>
               <a
                 href="https://medium.com/thinc-org"
