@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([["a81b"],{XLVq:function(n,e,a){"use strict";a.r(e);var t=a("q1tI"),w=a.n(t),c=a("Bp6I");e.default=function(){var n=Object(c.a)(new Date,new Date(1916,6,31));return w.a.createElement("span",null,n)}}}]);
