@@ -45,9 +45,8 @@ const Members = () => {
         const data = await (
           await fetch(`https://api.github.com/orgs/thinc-org/public_members?per_page=${maxPerPage}&page=${page}`)
         ).json()
-        console.log(data)
         setMembers((members) => {
-          return [members, ...data].sort((a, b) => a.login.localeCompare(b.login))
+          return [...members, ...data].sort((a, b) => a.login.localeCompare(b.login))
         })
       }
     })()
