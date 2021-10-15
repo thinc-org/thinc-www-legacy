@@ -34,13 +34,21 @@ const Profile = ({ avatarURL, profileURL, username, imageAlt }) => (
   </>
 )
 
+const maxPerPage = 100
+const maxPage = 1
+
 const Members = () => {
   const [members, setMembers] = useState([])
   useEffect(() => {
-    ; (async function fetchAPI() {
-      const data = await (await fetch(`https://api.github.com/orgs/thinc-org/public_members`)).json()
-      data.sort((a, b) => a.login.localeCompare(b.login))
-      setMembers(data)
+    ;(async function fetchAPI() {
+      for (let page = 0; page < maxPage; page++) {
+        const data = await (
+          await fetch(`https://api.github.com/orgs/thinc-org/public_members?per_page=${maxPerPage}&page=${page}`)
+        ).json()
+        setMembers((members) => {
+          return [...members, ...data].sort((a, b) => a.login.localeCompare(b.login))
+        })
+      }
     })()
   }, [])
   const renderProfiles = () => {
