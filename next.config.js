@@ -5,7 +5,7 @@ const withCSS = require('@zeit/next-css')
 const config = {
   exportPathMap: function () {
     return {
-      'src/': { page: '/' },
+      '/': { page: '/' },
     }
   },
 }
