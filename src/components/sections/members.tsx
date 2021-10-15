@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-unfetch'
+import axios from 'axios'
 import { useState, useEffect } from 'react'
 
 interface ProfileProps {
@@ -71,9 +71,9 @@ const Members = () => {
   useEffect(() => {
     ;(async function fetchAPI() {
       for (let page = 0; page < maxPage; page++) {
-        const data: GithubMemberProps[] = await (
-          await fetch(`https://api.github.com/orgs/thinc-org/public_members?per_page=${maxPerPage}&page=${page}`)
-        ).json()
+        const { data }: { data: GithubMemberProps[] } = await axios.get(
+          `https://api.github.com/orgs/thinc-org/public_members?per_page=${maxPerPage}&page=${page}`
+        )
 
         setMembers((members) => {
           return [...members, ...data].sort((a, b) => a.login.localeCompare(b.login))
