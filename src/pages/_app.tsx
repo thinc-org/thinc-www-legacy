@@ -2,8 +2,8 @@ import App from 'next/app'
 import Head from 'next/head'
 import React from 'react'
 
-import { NavigationBar } from '../components/navigation-bar'
-import '../resources/tailwind.css'
+import { NavigationBar } from '@/components/navigation-bar'
+import '@/resources/tailwind.css'
 
 class MyApp extends App {
   render() {

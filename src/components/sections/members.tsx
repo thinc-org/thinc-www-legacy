@@ -1,7 +1,15 @@
 import fetch from 'isomorphic-unfetch'
 import { useState, useEffect } from 'react'
 
-const Profile = ({ avatarURL, profileURL, username, imageAlt }) => (
+interface ProfileProps {
+  username: string
+  avatarURL: string
+  profileURL: string
+  imageAlt: string
+  key: number
+}
+
+const Profile = ({ avatarURL, profileURL, username, imageAlt }: ProfileProps) => (
   <>
     <style jsx>{`
       img {
@@ -19,7 +27,7 @@ const Profile = ({ avatarURL, profileURL, username, imageAlt }) => (
       }
     `}</style>
     <div className="inline-block m-2">
-      <a className="no-underline" alt={username} title={username} href={profileURL} target="_blank">
+      <a className="no-underline" title={username} href={profileURL} target="_blank">
         <div id="profile" className="bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-3 rounded-lg">
           <div className="flex flex-row items-center">
             <img alt={imageAlt} className="rounded-full mr-3" src={avatarURL} />
@@ -37,14 +45,36 @@ const Profile = ({ avatarURL, profileURL, username, imageAlt }) => (
 const maxPerPage = 100
 const maxPage = 1
 
+interface GithubMemberProps {
+  login: string
+  id: number
+  node_id: string
+  avatar_url: string
+  gravatar_id: string
+  url: string
+  html_url: string
+  followers_url: string
+  following_url: string
+  gists_url: string
+  starred_url: string
+  subscriptions_url: string
+  organizations_url: string
+  repos_url: string
+  events_url: string
+  received_events_url: string
+  type: string
+  site_admin: boolean
+}
+
 const Members = () => {
-  const [members, setMembers] = useState([])
+  const [members, setMembers] = useState<GithubMemberProps[]>([])
   useEffect(() => {
     ;(async function fetchAPI() {
       for (let page = 0; page < maxPage; page++) {
-        const data = await (
+        const data: GithubMemberProps[] = await (
           await fetch(`https://api.github.com/orgs/thinc-org/public_members?per_page=${maxPerPage}&page=${page}`)
         ).json()
+
         setMembers((members) => {
           return [...members, ...data].sort((a, b) => a.login.localeCompare(b.login))
         })

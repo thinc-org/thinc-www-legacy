@@ -1,6 +1,8 @@
 import classNames from 'classnames'
 
-const Card = ({ className, children }) => {
+import { WithClassName } from '@/types/common'
+
+const Card: React.FC<WithClassName> = ({ className, children }) => {
   return <div className={classNames('mx-3 w-full p-10 lg:p-15 rounded-lg', className)}>{children}</div>
 }
 

@@ -1,6 +1,6 @@
-import Particles from 'react-particles-js'
+import Particles, { IParticlesParams } from 'react-particles-js'
 
-const config = {
+const config: IParticlesParams = {
   particles: {
     number: {
       value: 80,
@@ -86,7 +86,7 @@ const config = {
         size: 40,
         duration: 2,
         opacity: 8,
-        speed: 3,
+        // speed: 3,
       },
       repulse: {
         distance: 200,
@@ -121,7 +121,7 @@ const Hero = () => (
         </p>
       </div>
     </div>
-    <Particles width="100%" height={800} className="w-full h-full flex absolute top-0 z-10" params={config} />
+    <Particles width="100%" height="800" className="w-full h-full flex absolute top-0 z-10" params={config} />
   </section>
 )
 
