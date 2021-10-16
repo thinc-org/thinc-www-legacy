@@ -1,6 +1,8 @@
 import fetch from 'isomorphic-unfetch'
 import { useState, useEffect } from 'react'
 
+import NavigationButton from '../navigation-button'
+
 const Profile = ({ avatarURL, profileURL, username, imageAlt }) => (
   <>
     <style jsx>{`
@@ -92,11 +94,7 @@ const Members = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="bg-gray-200 text-gray-600 hover:bg-gray-300 hover:underline px-4 py-3 rounded-lg">
-                <div className="flex flex-row items-center">
-                  <p className="text-sm">All Members {'->'}</p>
-                </div>
-              </div>
+              <NavigationButton>All Members {'->'}</NavigationButton>
             </a>
           </div>
         </div>

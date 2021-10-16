@@ -1,5 +1,7 @@
 import format from 'date-fns/format'
 
+import NavigationButton from '../navigation-button'
+
 const Medium = ({ feeds }) => {
   const mediumFeed = feeds.map((feed) => {
     const creatorFirstLetter = feed.creator[0]
@@ -42,7 +44,8 @@ const Medium = ({ feeds }) => {
         <a href={feed.link} target="_blank" rel="noopener noreferrer">
           <h6 className="mt-4 text-2xl font-bold ">{feed.title}</h6>
         </a>
-        <div className="flex items-center mt-2">
+        <div className="text-gray-600 text-lg mt-2 break-normal">{feed.text}</div>
+        <div className="flex items-center mt-5">
           <div
             className="rounded-full border bg-teal-500 text-white text-center p-1"
             style={{ width: '36px', height: '36px' }}
@@ -93,7 +96,7 @@ const Medium = ({ feeds }) => {
                   </div>
                   <p className="text-gray-600 text-base font-normal leading-relaxed my-4">
                     Thinc. is a student run organization whose aim is to incubate students for making impact to society
-                    by using IT development.
+                    using IT development.
                   </p>
                   <a href="https://medium.com/thinc-org" target="_blank" rel="noopener noreferrer">
                     <h6 className="text-yellow-800">More information</h6>
@@ -104,15 +107,11 @@ const Medium = ({ feeds }) => {
               <div className="medium-article-container mt-4">{mediumFeed}</div>
               <a
                 href="https://medium.com/thinc-org"
-                className="inline-block mx-2 mt-6"
+                className="inline-block mx-2 mt-12"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="bg-gray-200 text-gray-600 hover:bg-gray-300 hover:underline px-4 py-3 rounded-lg">
-                  <div className="flex flex-row items-center">
-                    <p className="text-sm">All Publications {'->'}</p>
-                  </div>
-                </div>
+                <NavigationButton>All Publications {'->'}</NavigationButton>
               </a>
             </div>
           </div>

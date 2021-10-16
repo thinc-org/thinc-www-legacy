@@ -11,6 +11,7 @@ import Hero from '../components/sections/hero'
 import Medium from '../components/sections/medium'
 import Projects from '../components/sections/projects'
 import Teams from '../components/sections/teams'
+import trimContent from '../utils/trimContent'
 
 const Members = dynamic(() => import('../components/sections/members'), {
   ssr: false,
@@ -40,12 +41,15 @@ export async function getStaticProps() {
   const feed = await parser.parseURL('https://medium.com/feed/thinc-org')
   const processedFeed = feed.items.slice(0, 6).map((item) => {
     const imgSrc = getSrc(item['content:encoded']).replace('/1024/', '/400/')
+    const content = item['content:encodedSnippet']
+    const text = trimContent(content)
     return {
       title: item.title,
       date: item.pubDate,
       creator: item.creator,
       link: item.link,
       imgSrc,
+      text,
     }
   })
 
