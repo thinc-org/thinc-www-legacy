@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
+import NavigationButton from '@/components/navigation-button'
+
 interface ProfileProps {
   username: string
   avatarURL: string
@@ -27,8 +29,8 @@ const Profile = ({ avatarURL, profileURL, username, imageAlt }: ProfileProps) =>
       }
     `}</style>
     <div className="inline-block m-2">
-      <a className="no-underline" title={username} href={profileURL} target="_blank">
-        <div id="profile" className="bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-3 rounded-lg">
+      <a className="no-underline" title={username} href={profileURL} target="_blank" rel="noopener noreferrer">
+        <div id="profile" className="bg-white text-gray-600 hover:bg-gray-200 px-4 py-3 rounded-lg">
           <div className="flex flex-row items-center">
             <img alt={imageAlt} className="rounded-full mr-3" src={avatarURL} />
             <p className="text-sm">
@@ -107,7 +109,7 @@ const Members = () => {
     }
   }
   return (
-    <section className="w-full bg-white py-20">
+    <section className="w-full bg-gray-100 py-20">
       <div className="container">
         <div className="mx-8">
           <div className="w-full flex items-center flex-col">
@@ -121,12 +123,13 @@ const Members = () => {
             <div className="w-full flex justify-center">
               <div className="inline-block text-center">{renderProfiles()}</div>
             </div>
-            <a href="https://github.com/orgs/thinc-org/people" className="inline-block m-2">
-              <div className="bg-gray-200 text-gray-600 hover:bg-gray-300 hover:underline px-4 py-3 rounded-lg">
-                <div className="flex flex-row items-center">
-                  <p className="text-sm">All Members {'->'}</p>
-                </div>
-              </div>
+            <a
+              href="https://github.com/orgs/thinc-org/people"
+              className="inline-block m-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <NavigationButton>All Members {'->'}</NavigationButton>
             </a>
           </div>
         </div>
