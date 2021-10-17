@@ -1,6 +1,8 @@
 import classNames from 'classnames'
 
-const Icon = ({ className, children }) => (
+import { WithClassName } from '@/types/common'
+
+const Icon: React.FC<WithClassName> = ({ className, children }) => (
   <>
     <style jsx>{`
       div {

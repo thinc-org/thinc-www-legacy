@@ -1,7 +1,6 @@
 import { MdOpenInNew } from 'react-icons/md'
 
-import Card from '../../components/card'
-import Icon from '../../components/icon'
+import Card from '@/components/card'
 
 const Projects = () => (
   <>
@@ -89,7 +88,7 @@ const Projects = () => (
       </div>
       <div className="container">
         <div className="mx-8">
-          <p className="text-base text-center text-blue-600 leading-none">All Projects -></p>
+          <p className="text-base text-center text-blue-600 leading-none">{'All Projects ->'}</p>
         </div>
       </div>
     </section>

@@ -1,15 +1,17 @@
 import classNames from 'classnames'
 import { useEffect, useState } from 'react'
 
+import { WithClassName } from '@/types/common'
+
 const HEIGHT = '60px'
 
-const NavigationBarSpacer = ({ className }) => (
+const NavigationBarSpacer: React.FC<WithClassName> = ({ className }) => (
   <div className={classNames('w-full', 'flex', className)} style={{ height: HEIGHT }} />
 )
 
-const NavigationBar = ({ statusCode }) => {
+const NavigationBar: React.FC<{ statusCode: number | null | undefined }> = ({ statusCode }) => {
   const [enableShadow, setEnableShadow] = useState(false)
-  const handleScroll = (e) => {
+  const handleScroll = () => {
     if (enableShadow) {
       if (window.pageYOffset === 0) {
         setEnableShadow(false)

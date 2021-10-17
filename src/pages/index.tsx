@@ -3,21 +3,22 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Parser from 'rss-parser'
 
-import Recruiting from '../components/announcements/recruiting'
-import { NavigationBarSpacer } from '../components/navigation-bar'
-import About from '../components/sections/about'
-import Footer from '../components/sections/footer'
-import Hero from '../components/sections/hero'
-import Medium from '../components/sections/medium'
-import Projects from '../components/sections/projects'
-import Teams from '../components/sections/teams'
-import trimContent from '../utils/trimContent'
+import Recruiting from '@/components/announcements/recruiting'
+import { NavigationBarSpacer } from '@/components/navigation-bar'
+import About from '@/components/sections/about'
+import Footer from '@/components/sections/footer'
+import Hero from '@/components/sections/hero'
+import Medium from '@/components/sections/medium'
+import Projects from '@/components/sections/projects'
+import Teams from '@/components/sections/teams'
+import { MediumFeed } from '@/types/medium'
+import trimContent from '@/utils/trimContent'
 
-const Members = dynamic(() => import('../components/sections/members'), {
+const Members = dynamic(() => import('@/components/sections/members'), {
   ssr: false,
 })
 
-const Index = ({ mediumFeed }) => (
+const Index = ({ mediumFeed }: { mediumFeed: MediumFeed[] }) => (
   <>
     <Head>
       <title>Thinc.</title>
