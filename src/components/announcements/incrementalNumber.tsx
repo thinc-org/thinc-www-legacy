@@ -4,7 +4,7 @@ import { RefObject, useEffect, useRef } from 'react'
 const easing = BezierEasing(0.16, 1, 0.27, 0.89)
 
 function animateValue(ref: RefObject<HTMLSpanElement>, start: number, end: number, duration: number) {
-  let startTimestamp: number = 0
+  let startTimestamp: number | null = null
   const step = (timestamp: number) => {
     if (!startTimestamp) startTimestamp = timestamp
     const progress = Math.min((timestamp - startTimestamp) / duration, 1)
