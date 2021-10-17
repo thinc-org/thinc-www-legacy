@@ -3,7 +3,7 @@
  * @param {string} content : content from RSS content:encodedSnippet;
  * @returns trimmed content to first line and not more than 100 characters
  */
-const trimContent = (content) => {
+const trimContent = (content: string) => {
   const firstLine = content.split('\n')[0]
   const CHARECTER_LIMIT = 100
   let charCount = 0

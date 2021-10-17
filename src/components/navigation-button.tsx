@@ -1,6 +1,8 @@
 import classNames from 'classnames'
 
-const NavigationButton = ({ className, children }) => (
+import { WithClassName } from '@/types/common'
+
+const NavigationButton: React.FC<WithClassName> = ({ className, children }) => (
   <button
     className={classNames(
       'bg-gray-200 text-gray-600 hover:bg-gray-300 hover:underline px-4 py-3 rounded-lg',

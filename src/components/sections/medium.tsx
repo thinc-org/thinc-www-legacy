@@ -1,8 +1,14 @@
 import format from 'date-fns/format'
 
+import { MediumFeed } from '@/types/medium'
+
 import NavigationButton from '../navigation-button'
 
-const Medium = ({ feeds }) => {
+interface MediumProps {
+  feeds: MediumFeed[]
+}
+
+const Medium: React.FC<MediumProps> = ({ feeds }) => {
   const mediumFeed = feeds.map((feed) => {
     const creatorFirstLetter = feed.creator[0]
     const date = format(new Date(feed.date), 'MMM dd, yyyy')
