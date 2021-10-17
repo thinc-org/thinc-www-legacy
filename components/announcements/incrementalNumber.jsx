@@ -1,12 +1,16 @@
+import BezierEasing from 'bezier-easing'
 import { useEffect, useRef } from 'react'
+
+const easing = BezierEasing(0.16, 1, 0.27, 0.89)
 
 function animateValue(ref, start, end, duration) {
   let startTimestamp = null
   const step = (timestamp) => {
     if (!startTimestamp) startTimestamp = timestamp
     const progress = Math.min((timestamp - startTimestamp) / duration, 1)
-    ref.current.innerHTML = Math.floor(progress * (end - start) + start)
-    if (progress < 1) {
+    const processExpo = easing(progress)
+    ref.current.innerHTML = Math.floor(processExpo * (end - start) + start)
+    if (processExpo < 1) {
       window.requestAnimationFrame(step)
     }
   }
