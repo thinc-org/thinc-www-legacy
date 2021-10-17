@@ -82,7 +82,7 @@ const Medium = ({ feeds }) => {
             <div className="w-full flex items-center flex-col">
               <div className="w-full md:w-2/3 mb-20">
                 <p className="text-4xl text-center font-headline font-semibold leading-none text-black mb-10">Medium</p>
-                <div className="flex flex-col">
+                <div className="flex flex-col bg-gray-100 p-10 rounded-lg">
                   <div className="flex flex-row items-center">
                     <img
                       width="36"
@@ -98,7 +98,7 @@ const Medium = ({ feeds }) => {
                     Thinc. is a student run organization whose aim is to incubate students for making impact to society
                     using IT development.
                   </p>
-                  <a href="https://medium.com/thinc-org" target="_blank" rel="noopener noreferrer">
+                  <a href="https://medium.com/thinc-org/about" target="_blank" rel="noopener noreferrer">
                     <h6 className="text-yellow-800">More information</h6>
                   </a>
                 </div>

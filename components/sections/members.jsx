@@ -29,7 +29,7 @@ const Profile = ({ avatarURL, profileURL, username, imageAlt }) => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div id="profile" className="bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-3 rounded-lg">
+        <div id="profile" className="bg-white text-gray-600 hover:bg-gray-200 px-4 py-3 rounded-lg">
           <div className="flex flex-row items-center">
             <img alt={imageAlt} className="rounded-full mr-3" src={avatarURL} />
             <p className="text-sm">
@@ -82,7 +82,7 @@ const Members = () => {
     }
   }
   return (
-    <section className="w-full bg-white py-20">
+    <section className="w-full bg-gray-100 py-20">
       <div className="container">
         <div className="mx-8">
           <div className="w-full flex items-center flex-col">
