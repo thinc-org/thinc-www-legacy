@@ -18,7 +18,6 @@ class MyDocument extends Document {
               `,
             }}
           />
-          <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
         </Head>
         <body className="font-sans leading-normal text-base text-black antialiased">
           <Main />
