@@ -51,19 +51,21 @@ const Projects = () => (
                 className="mb-5 rounded-full bg-white flex items-center justify-center border product-preview"
                 src="/static/cusc-logo.png"
               ></img>
-              <p className="text-xl font-headline font-medium text-black mb-5">Sports Complex Booking</p>
+              <p className="text-xl font-headline font-medium text-black mb-5">
+                Chulalongkorn University Sports Center
+              </p>
               <p className="text-base font-normal text-gray-600 leading-relaxed">
-                Tired of running to the sports complex early every day? Now, you can book your reservations anytime and
-                anywhere.
+                Tired of running to the sports center early every day? Now, you can book your court reservations
+                anywhere at anytime.
               </p>
             </div>
             <div>
-              <button
-                disabled
-                className="bg-transparent px-4 py-2 rounded text-gray-600 border text-xs tracking-widest uppercase cursor-auto"
-              >
-                COMING EARLY 2022
-              </button>
+              <a href="https://book.cusc.chula.ac.th" target="_blank" rel="noopener noreferrer">
+                <button disabled className="bg-black px-4 py-2 rounded text-white text-xs tracking-widest uppercase">
+                  START <span className="font-bold">BOOKING</span>
+                  <MdOpenInNew className="inline text-sm ml-1" />
+                </button>
+              </a>
             </div>
           </Card>
         </div>
