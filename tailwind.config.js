@@ -380,6 +380,7 @@ module.exports = {
     width: (theme) => ({
       auto: 'auto',
       ...theme('spacing'),
+      96: '24rem',
       '1/2': '50%',
       '1/3': '33.33333%',
       '2/3': '66.66667%',
@@ -471,6 +472,7 @@ module.exports = {
     pointerEvents: ['responsive'],
     position: ['responsive'],
     resize: ['responsive'],
+    scale: ['responsive', 'hover', 'focus'],
     stroke: ['responsive'],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],

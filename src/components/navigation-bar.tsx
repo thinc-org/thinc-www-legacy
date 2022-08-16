@@ -46,7 +46,7 @@ const NavigationBar: React.FC<{ statusCode: number | null | undefined }> = ({ st
       >
         <div className="container flex flex-row items-baseline justify-between">
           <div className="flex flex-row items-baseline mx-8">
-            <a href="#" className="text-xl font-headline font-semibold">
+            <a href="/" className="text-xl font-headline font-semibold">
               Thinc.
             </a>
             <div className="hidden">
