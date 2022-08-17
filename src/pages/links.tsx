@@ -20,6 +20,12 @@ const Links = ({ links }: LinkProps) => {
   )
 }
 
+interface AirtableRecord {
+  id: string
+  createdTime: string
+  fields: ILinkRecord
+}
+
 export async function getStaticProps() {
   const requestHeaders: HeadersInit = new Headers()
   requestHeaders.set('Authorization', `Bearer ${process.env.AIRTABLE_API_KEY}`)
@@ -29,15 +35,11 @@ export async function getStaticProps() {
     headers: requestHeaders,
   })
 
-  const linkRecords: { href: string; Title: string }[] = (await res.json()).records.map(
-    (record: { id: string; createdTime: string; fields: ILinkRecord }) => record.fields
-  )
+  const linkRecords: ILinkRecord[] = (await res.json()).records.map((record: AirtableRecord) => record.fields)
 
   return {
     props: {
-      links: linkRecords.map((record) => {
-        return { href: record.href, title: record.Title }
-      }),
+      links: linkRecords,
     },
     revalidate: 5 * 60,
   }
