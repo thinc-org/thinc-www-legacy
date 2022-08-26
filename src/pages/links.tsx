@@ -35,7 +35,9 @@ export async function getStaticProps() {
     headers: requestHeaders,
   })
 
-  const linkRecords: ILinkRecord[] = (await res.json()).records.map((record: AirtableRecord) => record.fields)
+  const linkRecords: ILinkRecord[] = (await res.json()).records
+    .map((record: AirtableRecord) => record.fields)
+    .sort((a: ILinkRecord, b: ILinkRecord) => +a.order - +b.order)
 
   return {
     props: {
