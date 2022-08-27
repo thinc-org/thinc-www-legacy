@@ -33,7 +33,7 @@ const Portal = ({ links }: PortalProps) => {
 
       <div className="flex flex-col gap-4 mt-10 w-full px-4 sm:w-96">
         {links.map((link) => {
-          return <PortalLink key={link.href} href={link.href} title={link.title} />
+          return <PortalLink key={link.href} {...link} />
         })}
       </div>
     </section>
