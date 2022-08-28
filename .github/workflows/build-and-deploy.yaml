@@ -22,7 +22,12 @@ jobs:
 
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn --fronzen-lockfile
+        run: yarn --frozen-lockfile
+
+      - name: Export secret as .env
+        run: |
+          echo "AIRTABLE_API_KEY=${{ secrets.AIRTABLE_API_KEY }}" >> .env
+          echo "AIRTABLE_CLIENT_SECRET=${{ secrets.AIRTABLE_CLIENT_SECRET }}" >> .env
 
       - name: Build 🔧
         run: |
