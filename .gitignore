@@ -40,3 +40,5 @@ jspm_packages
 .DS_Store
 out
 .vercel
+
+.env.local
