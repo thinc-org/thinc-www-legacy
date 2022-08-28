@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   prefix: '',
   important: false,
   separator: ':',
@@ -381,6 +382,7 @@ module.exports = {
       auto: 'auto',
       ...theme('spacing'),
       96: '24rem',
+      128: '32rem',
       '1/2': '50%',
       '1/3': '33.33333%',
       '2/3': '66.66667%',
