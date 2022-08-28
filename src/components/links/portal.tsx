@@ -9,7 +9,7 @@ const PortalLink = ({ href, title, icon }: PortalLinkProps) => {
   return (
     <Link href={href} passHref>
       <a>
-        <div className="w-full flex justify-between items-center relative text-sm rounded-full bg-white shadow-md px-6 py-5 text-center hover:bg-gray-100 hover:scale-110">
+        <div className="w-full flex justify-between items-center relative text-sm rounded-full bg-white shadow-md px-6 py-5 text-center hover:bg-gray-100 transform transition-transform duration-75 hover:scale-105">
           {icon ? <Image src={`/assets/${icon}.svg`} alt={icon} width={32} height={32} /> : <div className="w-8" />}
           <p>{title}</p>
           <div className="w-8" />
