@@ -5,7 +5,7 @@ import React from 'react'
 import { NavigationBar } from '@/components/navigation-bar'
 import '@/resources/tailwind.css'
 
-//
+//2s
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
