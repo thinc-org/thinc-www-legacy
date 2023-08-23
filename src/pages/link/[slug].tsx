@@ -2,17 +2,21 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import { useEffect } from 'react'
 
-const links = [
-  {
-    id: '1',
-    slug: 'first_meet_evaluation',
-    url: 'https://db.thinc.in.th/dashboard/#/nc/form/27083fe2-d533-4326-8d64-272676614d35',
-  },
-]
+import { nocoDBRequest } from '@/types/fetch'
+import { NocoDBRedirectRecord } from '@/types/links'
 
 export async function getStaticPaths() {
+  const res = await nocoDBRequest('Redirects?&shuffle=0&offset=0')
+
+  const records = ((await res.json()) as NocoDBRedirectRecord).list
+  const links = records.map((record) => {
+    return {
+      params: { slug: record.slug },
+    }
+  })
+
   return {
-    paths: links.map(({ slug }) => ({ params: { slug } })),
+    paths: links,
     fallback: false,
   }
 }
@@ -20,8 +24,17 @@ export async function getStaticPaths() {
 export const getStaticProps: GetStaticProps<{
   link: string
 }> = async ({ params }) => {
+  const res = await nocoDBRequest('Redirects?&shuffle=0&offset=0')
+  const records = ((await res.json()) as NocoDBRedirectRecord).list
+
+  const links = records.map((record) => {
+    return {
+      slug: record.slug,
+      url: record.url,
+    }
+  })
+
   const link = links?.find(({ slug }) => slug === params?.slug) ?? {
-    id: '',
     slug: '',
     url: '',
   }

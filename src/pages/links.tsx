@@ -2,7 +2,8 @@ import Head from 'next/head'
 
 import Portal from '@/components/links/portal'
 import Footer from '@/components/sections/footer'
-import { ILinkRecord } from '@/types/links'
+import { nocoDBRequest } from '@/types/fetch'
+import { ILinkRecord, NocoDBLinkRecord } from '@/types/links'
 
 interface LinkProps {
   links: ILinkRecord[]
@@ -20,23 +21,18 @@ const Links = ({ links }: LinkProps) => {
   )
 }
 
-interface AirtableRecord {
-  id: string
-  createdTime: string
-  fields: ILinkRecord
-}
-
 export async function getStaticProps() {
-  const requestHeaders: HeadersInit = new Headers()
-  requestHeaders.set('Authorization', `Bearer ${process.env.AIRTABLE_API_KEY}`)
-  requestHeaders.set('X-Airtable-Client-Secret', process.env.AIRTABLE_CLIENT_SECRET ?? '')
+  const res = await nocoDBRequest('Links?&shuffle=0&offset=0')
 
-  const res = await fetch('https://api.airtable.com/v0/appTJRDfmc9EBSDvO/Links', {
-    headers: requestHeaders,
-  })
-
-  const linkRecords: ILinkRecord[] = (await res.json()).records
-    .map((record: AirtableRecord) => record.fields)
+  const linkRecords: ILinkRecord[] = ((await res.json()) as NocoDBLinkRecord).list
+    .map((record) => {
+      return {
+        href: record.href,
+        icon: record?.icon ?? null,
+        order: record.order,
+        title: record.title,
+      } as ILinkRecord
+    })
     .sort((a: ILinkRecord, b: ILinkRecord) => +a.order - +b.order)
 
   return {
