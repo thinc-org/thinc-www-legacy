@@ -8,11 +8,6 @@ const links = [
     slug: 'first_meet_evaluation',
     url: 'https://db.thinc.in.th/dashboard/#/nc/form/27083fe2-d533-4326-8d64-272676614d35',
   },
-  {
-    id: '2',
-    slug: '',
-    url: 'https://thinc.in.th',
-  },
 ]
 
 export async function getStaticPaths() {
