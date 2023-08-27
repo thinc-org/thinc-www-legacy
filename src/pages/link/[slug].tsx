@@ -9,11 +9,12 @@ export async function getStaticPaths() {
   const res = await nocoDBRequest('Redirects?&shuffle=0&offset=0')
 
   const records = ((await res.json()) as NocoDBRedirectRecord).list
-  const links = records.map((record) => {
-    return {
-      params: { slug: record.slug },
-    }
-  })
+  const links =
+    records?.map((record) => {
+      return {
+        params: { slug: record.slug },
+      }
+    }) ?? []
 
   return {
     paths: links,
@@ -27,12 +28,13 @@ export const getStaticProps: GetStaticProps<{
   const res = await nocoDBRequest('Redirects?&shuffle=0&offset=0')
   const records = ((await res.json()) as NocoDBRedirectRecord).list
 
-  const links = records.map((record) => {
-    return {
-      slug: record.slug,
-      url: record.url,
-    }
-  })
+  const links =
+    records?.map((record) => {
+      return {
+        slug: record.slug,
+        url: record.url,
+      }
+    }) ?? []
 
   const link = links?.find(({ slug }) => slug === params?.slug) ?? {
     slug: '',
