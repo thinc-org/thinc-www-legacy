@@ -24,16 +24,17 @@ const Links = ({ links }: LinkProps) => {
 export async function getStaticProps() {
   const res = await nocoDBRequest('Links?&shuffle=0&offset=0')
 
-  const linkRecords: ILinkRecord[] = ((await res.json()) as NocoDBLinkRecord).list
-    .map((record) => {
-      return {
-        href: record.href,
-        icon: record?.icon ?? null,
-        order: record.order,
-        title: record.title,
-      } as ILinkRecord
-    })
-    .sort((a: ILinkRecord, b: ILinkRecord) => +a.order - +b.order)
+  const linkRecords: ILinkRecord[] =
+    ((await res.json()) as NocoDBLinkRecord)?.list
+      ?.map((record) => {
+        return {
+          href: record.href,
+          icon: record?.icon ?? null,
+          order: record.order,
+          title: record.title,
+        } as ILinkRecord
+      })
+      .sort((a: ILinkRecord, b: ILinkRecord) => +a.order - +b.order) ?? []
 
   return {
     props: {
