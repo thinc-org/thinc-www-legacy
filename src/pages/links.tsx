@@ -25,7 +25,7 @@ export async function getStaticProps() {
   const res = await nocoDBRequest('Links?&shuffle=0&offset=0')
 
   const linkRecords: ILinkRecord[] =
-    ((await res.json()) as NocoDBLinkRecord)?.list
+    ((await res.json()) as NocoDBLinkRecord).list
       ?.map((record) => {
         return {
           href: record.href,
