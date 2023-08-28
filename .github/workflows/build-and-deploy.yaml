@@ -29,8 +29,8 @@ jobs:
         run: |
           echo "AIRTABLE_API_KEY=${{ secrets.AIRTABLE_API_KEY }}" >> .env
           echo "AIRTABLE_CLIENT_SECRET=${{ secrets.AIRTABLE_CLIENT_SECRET }}" >> .env
-          echo "NOCODB_AUTH_TOKEN"=${{ secrets.NOCODB_AUTH_TOKEN }}" >> .env
-          echo "NOCODB_API_KEY"=${{ secrets.NOCODB_API_KEY }}" >> .env
+          echo "NOCODB_AUTH_TOKEN=${{ secrets.NOCODB_AUTH_TOKEN }}" >> .env
+          echo "NOCODB_API_KEY=${{ secrets.NOCODB_API_KEY }}" >> .env
 
       - name: Build 🔧
         run: |
